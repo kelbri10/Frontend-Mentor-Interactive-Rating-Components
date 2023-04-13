@@ -1,0 +1,124 @@
+:root{ 
+    --primary-color: hsl(25, 97%, 53%); 
+    --clr-white: hsl(0, 0%, 100%); 
+    --clr-lgtGrey: hsl(217, 12%, 63%); 
+    --clr-mdGrey: hsl(216, 12%, 54%); 
+    --clr-drkBlue: hsl(213, 19%, 18%); 
+    --clr-veryDrkBlue: hsl(216, 12%, 8%); 
+
+    --rg-fontsize: 15px; 
+
+    --font-family: 'Overpass', sans-serif;
+    --400-font-weight: 400; 
+    --700-font-weight: 700; 
+}
+*, *::before, *::after{ 
+    margin: 0; 
+    padding: 0; 
+}
+
+body{ 
+    height: 100vh; 
+    box-sizing: border-box; 
+    font-family: var(--font-family);
+    background-color: var(--clr-veryDrkBlue); 
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.wrapper{ 
+    width: 350px; 
+    height: 400px; 
+    border-radius: 5%; 
+    background-color: var(--clr-drkBlue); 
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center; 
+   
+
+    margin-bottom: 3rem;
+}
+
+.rating_header{ 
+    margin: 2rem; 
+}
+.rating_header h1{ 
+    color: var(--clr-white);
+    font-weight: var(--400-font-weight); 
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.rating_header p{ 
+    color: var(--clr-lgtGrey); 
+    
+    font-size: 0.9rem; 
+}
+
+.radio_container{ 
+   
+    width: 80%;  
+     
+}
+
+.radio{ 
+    display: flex; 
+    justify-content: space-evenly; 
+    height: 100%;
+}
+
+.radio input[type='radio']{ 
+    /* border: 2px solid yellow;  */
+    /* appearance: none;  */
+    appearance: none; 
+    cursor: pointer; 
+    position: relative; 
+    bottom: 30px; 
+
+    
+    border-radius: 50%;
+
+    padding: 0.9rem 1rem; 
+    color: var(--clr-lgtGrey); 
+    
+  
+}
+
+.radio input[type='radio']::before{ 
+    content: attr(data-number);     
+    
+}
+
+.radio input[type='radio']:checked{
+    background-color: var(--primary-color); 
+    color: var(--clr-white); 
+}
+
+.btn{ 
+    width: 80%; 
+}
+
+.btn button{ 
+    cursor: pointer; 
+    width: 100%; 
+    padding: 0.85rem 1rem;
+    border: none; 
+    border-radius: 2rem;
+    background-color: var(--primary-color); 
+    color: var(--clr-white); 
+    font-size: 1rem; 
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+}
+
+.btn button:hover{ 
+    color: var(--primary-color);
+    background-color: var(--clr-white); 
+}
+
+
