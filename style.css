@@ -15,18 +15,21 @@
 *, *::before, *::after{ 
     margin: 0; 
     padding: 0; 
+    box-sizing: border-box; 
 }
 
 body{ 
-    height: 100vh; 
-    box-sizing: border-box; 
+
+    min-height: 100vh; 
     font-family: var(--font-family);
     background-color: var(--clr-veryDrkBlue); 
 
-    display: flex; 
+    display: grid; 
+    place-items: center; 
+    /* display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;  */
 }
 
 .wrapper{ 
@@ -80,18 +83,28 @@ body{
     position: relative; 
     bottom: 30px; 
 
+    background-color: var(--clr-white); 
     
     border-radius: 50%;
 
     padding: 0.9rem 1rem; 
     color: var(--clr-lgtGrey); 
+    font-weight: var(--700-font-weight); 
     
+    height: 50px; 
+    width: 50px; 
   
 }
 
 .radio input[type='radio']::before{ 
     content: attr(data-number);     
-    
+    position: absolute; 
+    bottom: 35%; 
+    right: 45%; 
+}
+
+.radio input[type='radio']:hover{ 
+    border: 2px var(--primary-color) solid; 
 }
 
 .radio input[type='radio']:checked{
