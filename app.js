@@ -21,7 +21,9 @@ const thankYou = (userChoice) => {
 
     wrapper.innerHTML = 
     `<img src='images/illustration-thank-you.svg' />
-    <p>You selected ${userChoice} out of 5</p>
+    <div class='rating_select'>
+        <p>You selected ${userChoice} out of 5</p>
+    </div>
     <div class='thankyou_container'>
         <h1>Thank you!</h1>
         <p>We appreciate you taking the time to give a rating. If you ever need more support, dont hesitate to get in touch!</p>
